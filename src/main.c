@@ -32,7 +32,7 @@ k_tid_t main_thread_id;
 
 
 #define I2C1_NODE DT_NODELABEL(io_expander1)
-static const struct i2c_dt_spec ioExpander1 = I2C_DT_SPEC_GET(I2C1_NODE);
+//static const struct i2c_dt_spec ioExpander1 = I2C_DT_SPEC_GET(I2C1_NODE);
 //ret = i2c_write_dt(&ioExpander1, writeData, sizeof(writeData));
 
 
@@ -65,7 +65,7 @@ typedef struct
 } i2c_config_t;
 
 static const i2c_config_t allI2C[] = {
-    {&ioExpander1}
+    //{&ioExpander1}
 };
 
 bool initGpio(){
@@ -96,7 +96,7 @@ bool initI2C(){
 
 
 
-void main(void)
+int main(void)
 {
 	printk("Hello World! %s\n", CONFIG_BOARD);
     main_thread_id = k_current_get();
@@ -119,5 +119,5 @@ void main(void)
             k_msleep(500);
         }
     }
-   return;
+   return 1;
 }
