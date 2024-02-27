@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "device.h": "c"
+        "device.h": "c",
+        "log.h": "c",
+        "lcd1306.h": "c",
+        "kernel.h": "c",
+        "display.h": "c",
+        "gpio.h": "c"
     }
 }
